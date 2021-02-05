@@ -1,0 +1,44 @@
+baseURL = "https://www.nerdy.lt/"
+languageCode = "en-us"
+title = "Nerdy.lt"
+theme = "altius"
+
+DefaultContentLanguage = "en"
+SectionPagesMenu = "main"
+Paginate = 12 
+googleAnalytics = ""
+enableRobotsTXT = true
+enableEmoji = true
+disableKinds = ["taxonomy", "taxonomyTerm"]
+summaryLength = 150
+
+[author]
+    name = "Nerdy Altius"
+    email = "admin@altiusday.lt"
+
+[params]
+  favicon = "https://lh3.googleusercontent.com/-YCP7iCHdwf0/X6egYpNGYWI/AAAAAAAAE4o/pc-ILMmzG8g3KRUA2stRmw0rnv86okZiwCLcBGAsYHQ/s80/512.png"
+  site_logo = "https://lh3.googleusercontent.com/-YCP7iCHdwf0/X6egYpNGYWI/AAAAAAAAE4o/pc-ILMmzG8g3KRUA2stRmw0rnv86okZiwCLcBGAsYHQ/s80/512.png"
+  description = "AltiusDay antras tinklarastis | Programinis kodas | Ismaniuju irenginiu konfiguracija | Pravarcios pamokos ir dar daug visko"
+  facebook = "https://www.facebook.com/altiusday"
+  twitter = "https://twitter.com/AltiusDay"
+  instagram = "https://www.instagram.com/_andrius_p_/"
+  youtube = ""
+  github = ""
+  gitlab = ""
+  linkedin = ""
+  mastodon = ""
+  slack = ""
+  stackoverflow = ""
+  rss = "https://nerdy.lt/sitemap.xml"
+  background_color_class = "bg-white"
+  featured_image = "/connection.jpg"
+  recent_posts_number = 12
+  post_navigation = true
+  ogimage = "/connection.jpg"
+  imgalt="altiusimage"
+
+
+[taxonomies]
+   tag = "tags"
+
