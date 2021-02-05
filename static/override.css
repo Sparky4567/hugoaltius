@@ -1,0 +1,121 @@
+html,body { width: 100% !important; height: 100% !important; margin: 0px !important; padding: 0px !important; overflow-x: hidden !important; }
+
+.st-btn > img {
+  height: 25px !important;
+  width: 25px !important;
+}
+.st-btn{
+  min-width: 90px !important;
+  max-width: 90px !important;
+  display: table-cell !important;
+  vertical-align: middle !important;
+  margin: 10px 20px 10px 10px !important;
+  background-color:#212121 !important;
+}
+
+#st-1 > .st-btn{
+  display: inline-block !important;
+  margin-left: 0px !important;
+  margin-right: 10px !important;
+}
+
+#st-4 > .st-btn{
+  height:48px !important;
+}
+.sharethis-inline-share-buttons>.st-btn{
+  height:40px !important;
+}
+#st-3 > .st-btn.st-first {
+  border-top: none;
+  border-top-right-radius: 20px !important;
+}
+#st-3  .st-btn.st-last {
+  border-top: none;
+  border-bottom-right-radius: 20px !important;
+}
+
+#st-2 > .st-btn.st-first {
+  border-top: none;
+  border-top-right-radius: 20px !important;
+}
+#st-2  .st-btn.st-last {
+  border-top: none;
+  border-bottom-right-radius: 20px !important;
+}
+
+table {
+  width: 100%;
+}
+table td {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+.nextprev{
+  text-decoration: none !important;
+  color: white !important;
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+  padding-left: 1rem !important;
+  padding-right: 2rem !important;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  background-color: #212121;
+  margin-right: 0.4rem;
+  border-radius: 20px;
+  font-size: 24px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+  font-size: 1rem !important;
+}
+
+img{
+  max-width: 80% !important;
+  display: block;
+  margin-left: auto;
+  margin-right:auto;
+}
+
+.jumbotron{
+  background-color: white !important;
+}
+
+.btn-dark{
+  background-color: #212121 !important;
+  color: white !important;
+}
+
+.card{
+  font-size:1.4rem !important;
+  text-overflow: ellipsis;
+}
+
+.card-body {
+  font-size: 1.4 !important;
+  text-overflow: ellipsis;
+}
+
+.card-body p{
+  font-size: 1.4 !important;
+  text-overflow: ellipsis;
+}
+
+.card-body > h1,h2,h3,h4,h5,h6,p,code{
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+}
+
+.card-body > h1:first-of-type{
+  margin-top: 0rem !important;
+}
+
+@media (max-width:500px){
+  .f5 {
+    font-size: 2rem;
+    display: inherit;
+}
+.nextprev{font-size: 2rem !important;}
+
+
+}
