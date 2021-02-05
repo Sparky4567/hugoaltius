@@ -1,0 +1,42 @@
+<script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script defer>
+	 window.addEventListener('load',()=>{setTimeout(()=>{function getCookie(name){var v=document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)'); return v ? v[2] : null;}let cookieVal=getCookie('nerdycookie'); 
+if(cookieVal == "'confirmed'"){}
+else if(cookieVal!='confirmed' && cookieVal!='notconfirmed'){Swal.fire({title: 'We use cookies', html:"By pressing OK you'll agree with our privacy policy"+'<a style="color:#333;" href="https://nerdy.lt/privacy/"><b> Politika</b></a> ', icon: 'info', showDenyButton: true, denyButtonText: 'Nope', confirmButtonColor: '#333333', confirmButtonText: 'Ok'}).then((result)=>{if (result.isConfirmed){let date=new Date(Date.now() + 60*60*24*90*1000); date=date.toUTCString(); document.cookie="nerdycookie=confirmed;path=/;expires=" + date; Swal.fire( 'Approved!', 'Thank you.', 'success' );}else if (result.isDenied){Swal.fire('Okay :(', '', 'info');let date=new Date(Date.now() + 60*60*24*90*1000); date=date.toUTCString();window['ga-disable-G-RDJLCTXMNP'] = true; (adsbygoogle=window.adsbygoogle||[]).requestNonPersonalizedAds=1;document.cookie="nerdycookie=notconfirmed; expires=" + date;}});}},3000);});
+</script>
+<script defer>
+	 if('serviceWorker' in navigator) {
+      navigator.serviceWorker
+          .register('/sw.js', { scope: '/' })
+          .then(function(registration) {
+            console.log('╭∩╮（︶_︶）╭∩╮',"Made by altiusday.lt");
+          });
+
+      navigator.serviceWorker
+          .ready
+          .then(function(registration) {
+              
+          });
+  }
+</script>
+<script defer>
+	
+	window.addEventListener('load',()=>{
+		setTimeout(() => {
+			let sel = document.querySelectorAll('.goog-te-combo')[0];
+      if (sel.length>0) {
+      sel.classList.add('form-control');
+      sel.classList.add('form-control-md');
+      }
+		}, 300);
+  })
+  </script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0&appId=1752587268223101&autoLogAppEvents=1" nonce="WGcn4jKt"></script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0&appId=1752587268223101&autoLogAppEvents=1" nonce="CF0bNLWl"></script>		
+
+
+

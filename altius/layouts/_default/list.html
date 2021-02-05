@@ -1,0 +1,25 @@
+{{ define "main" }}
+		{{ if or .Title .Content }}
+			<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 mt-2 mb-2 mx-auto">
+				<div class="card text-left">
+					<div class="card-body">
+					  <p class="card-text">
+						  {{ with .Title }}<h1>{{ . }}</h1>{{ end }}<br><br>
+						{{ with .Content }}{{ . }}{{ end }}</p>
+					</div>
+				  </div>
+				
+			</div>
+			
+		{{ end }}
+		{{ range .Paginator.Pages }}
+		{{ .Render "summary" }}
+			
+		{{ end }}
+		
+			  {{ partial "pagination.html" . }}
+				{{ partial "sidebar.html" . }}
+
+
+{{ end }}
+

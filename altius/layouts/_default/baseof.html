@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en-us" }}" style="width: 100%;">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>{{ .Title }}</title>
+	<link rel="stylesheet" href="{{ "bt.css" | relURL }}">
+	<link rel="stylesheet" href="{{ "material.css" | relURL }}">
+	<link rel="stylesheet" href="{{ "override.css" | relURL }}">
+	<link rel="manifest" href="{{ "manifest.json" | relURL }}">
+	
+	{{ with .OutputFormats.Get "RSS" -}}
+		{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+	{{- end }}
+	{{ partial "meta.html" . -}}
+	{{ partial "headscripts.html" . -}}
+
+
+</head>
+<body>
+				{{ partial "header" . }}
+				<div class="container">
+					<div class="row">
+						{{ partial "head-additions.html" . -}}
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						{{ block "main" . }}{{ end }}
+					</div>
+				</div>
+			<div class="container-fluid">
+				<div class="row">
+					{{ partial "footer" . }}
+
+				</div>
+			</div>
+				
+</body>
+</html>

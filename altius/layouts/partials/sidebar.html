@@ -1,0 +1,11 @@
+<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 mx-auto mt-2 mb-8">
+<div class="card text-left">
+  <div class="card-body">
+	<h3 class="card-title">Ankstesni įrašai
+	</h3>
+	<p class="card-text">{{ range first 5 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+		<h6><a href="{{ .RelPermalink }}">{{ .Title }}</a></h6>
+		{{ end }}</p>
+  </div>
+</div>
+</div>

@@ -1,0 +1,39 @@
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
+<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+{{ with .Params.image }} 
+  <meta itemprop="image" content="{{ . | absURL }}" />
+  <meta property="og:image" content="{{ . | absURL }}" /> 
+  <meta name="twitter:image" content="{{ . | absURL }}" />
+  <meta name="twitter:image:src" content="{{ . | absURL }}" /> 
+{{ else }}
+  <meta itemprop="image" content="{{ .Site.Params.ogimage | absURL }}" />
+  <meta property="og:image" content="{{ .Site.Params.ogimage | absURL }}" />
+  <meta name="twitter:image" content="{{ .Site.Params.ogimage | absURL }}" />
+  <meta name="twitter:image:src" content="{{ .Site.Params.ogimage | absURL }}" /> 
+{{ end }}
+{{ with .Site.Language }}<meta property="og:locale" content="{{ .Lang }}" />{{ end }}
+<meta name="twitter:title" content="{{ .Title }}"/>
+<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end -}}"/>
+{{ if .IsHome -}}
+  {{ if ge .Site.Params.image.width 300 -}}
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="{{ .Site.Params.image.url | absURL }}"/>
+  {{- else -}}
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:image" content="{{ with .Site.Params.image }}{{ .url | absURL }}{{ else }}{{ with .Site.Params.logo }}{{ .url | absURL }}{{ end }}{{ end }}" />
+  {{- end }}
+{{- else -}}
+  {{ if ge (.Param "lua.image.width") 300 -}}
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="{{ .Param "lua.image.url" | absURL }}"/>
+  {{- else -}}
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:image" content="{{ with .Param "lua.image" }}{{ .url | absURL }}{{ else }}{{ with .Site.Params.logo }}{{ .url | absURL }}{{ end }}{{ end }}" />
+  {{- end }}
+{{- end }}
+{{ with .Site.Params.twitter -}}
+<meta name="twitter:site" content="@AltiusDay"/>
+{{- end }}

@@ -1,0 +1,21 @@
+
+<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 mx-auto mt-2 mb-2">
+	<div class="card text-left">
+		<div class="card-body">
+		  <h4 class="card-title">{{ .Title }}</h4><br>
+		  <p class="card-text">	<time>{{ .Date.Format "02.01.2006 15:04" }}</time><br><br>
+			{{ range .Params.tags }}
+			<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="btn btn-raised btn-md btn-primary">{{ . }}</a>
+			{{ end }}
+			<br><br>
+				{{ .Summary }}
+				{{ if .Truncated }}
+				<br><br>
+				<a href="{{ .Permalink }}" class="btn btn-md btn-dark btn-raised" aria-label="Read more about {{ .Permalink }}">Skaityti daugiau</a>
+				
+				{{ end }}
+		  </p>
+		</div>
+	  </div>	
+</div>
+

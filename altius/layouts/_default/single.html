@@ -1,0 +1,30 @@
+{{ define "main" }}
+			<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 mt-2 mb-2 mx-auto">
+				<div class="card text-left">
+				  <div class="card-body">
+					{{ partial "adone.html" . -}}
+
+					<p class="card-title"><h1>{{ .Title }}</h1></p>
+					<p class="card-text">
+						<time>{{ .Date.Format "02.01.2006 15:04" }}</time>
+						{{ .Content }}
+						{{ with .Params.tags }}
+								{{ range . }}
+								<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="btn btn-md btn-dark mr-1">{{ . }}</a>
+								{{ end }}
+						{{ end }}
+						{{ with .Site.DisqusShortname }}
+						{{ end }}
+					</p>
+						{{ partial "sharethis.html" . -}}
+						{{ partial "mycommentplugin.html" . -}}
+						{{ partial "nav.html" . -}}
+						{{ partial "adtwo.html" . -}}
+
+					</div>
+					</div>
+					
+					</div>
+			{{ end }}
+				
+		
