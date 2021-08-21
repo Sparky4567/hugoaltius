@@ -170,4 +170,4 @@ Use it for your own fun. Build it, break it or reimagine the whole concept. Try 
 
 
 
-If you ever wondered how to contact me, just write an email to admin@altiusday.lt and I'll answer
+If you ever wondered how to contact me, just write an email to andrius@artefaktas.eu and I'll answer
